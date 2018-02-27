@@ -1,0 +1,47 @@
+header{
+    padding: 10px;
+	padding-top: 10px;
+	background: #32CDFF;
+	position: fixed;
+	width: 100%;
+    display: inline-block;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+header .name{
+    margin-left: 35%;
+    color: #ffffff;
+    font-size: 20px;
+}
+
+header div{
+    display: inline;
+}
+
+a > span{
+    text-transform: uppercase;
+    color: #ffffff;
+}
+
+a:hover, a:visited, a:link, a:active{
+    text-decoration: none;
+}
+
+header .sdt{
+    margin-right: 5%;
+    color: #ffffff;
+    font-size: 20px;
+    float: right;
+}
+
+body div.age{
+    padding-top: 4%;
+}
+
+div.image{
+    padding-top: 5%;
+    text-align: center;
+}
+
+div > img{
+    width: 20%;
+}
