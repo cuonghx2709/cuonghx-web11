@@ -1,0 +1,54 @@
+
+body > .menu{
+    background: #D5B0AC;
+    color: #402E2A;
+    font-weight: bold;
+    height: 30px;
+    /* display: inline-block; */
+    text-align: center;
+    position: relative;
+    display: block;
+}
+
+.menu_sub {
+    display: none;
+}
+.menu_sub2{
+    display: none;
+}
+
+.menu > span{
+    display: inline-block;
+    width: 100px;
+    text-align: center;
+    line-height: 30px;
+    position: relative;
+    
+}
+.menu span:hover{
+    color: #ffffff;
+    background: #9CD08F;
+}
+.menu_sub > span ,.menu_sub2 >span{
+    display: block;
+    background: #D5B0AC;
+    width: 100px;
+    text-align: center;
+    line-height: 30px;
+}
+
+span:hover > nav.menu_sub{
+    display: block;
+    position: absolute;
+} 
+span:hover > nav.menu_sub2{ 
+    display: block;
+    position: absolute;
+    left: 100px;
+    top: 0px;
+} 
+
+
+
+
+

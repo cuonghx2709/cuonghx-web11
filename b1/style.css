@@ -33,3 +33,12 @@ a:hover{
 a:active{
     color: purple;
 }
+img{
+    transform: all .5s ease-in-out 0.3s;
+    opacity: 0.5;
+}
+
+img:hover{
+    transform: scale(2);
+    opacity: 1;
+}
