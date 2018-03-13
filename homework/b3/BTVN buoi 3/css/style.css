@@ -13,7 +13,7 @@
     text-align: center;
     display: inline-block;
     width: 75%;
-    height: 360px;
+    height: auto;
     position: relative;
     float: left;
 }
@@ -23,11 +23,14 @@
     text-align: center;
     display: inline-block;
     width: 25%;
-    height: 360px;
+    height: 100%;
     position: relative;
 }
 
 .footer {
     background-color: #00ffff;
     text-align: center;
+    width: 100%;
+    position: relative;
+    float: inherit
 }

@@ -1,0 +1,56 @@
+body{
+    display: flex;
+    flex-flow: row wrap;
+}
+
+body > * {
+    padding: 10px;
+    flex: 1 100%;
+}
+
+
+.header {
+    background-color: #0000ff;
+    text-align: center;
+    order: 1 ;
+}
+
+.nav {
+    background-color: #800080;
+    text-align: center;
+    order: 2;
+}
+
+.main {
+    background-color: #ffd700;
+    text-align: center;
+    order: 3;
+    flex: 2 0px;
+}
+
+.aside {
+    background-color: #808080;
+    text-align: center;
+    order: 4;
+    flex: 1;
+}
+
+.footer {
+    background-color: #00ffff;
+    text-align: center;
+    order: 5;
+}
+
+div {
+    order: 6;
+    display: inline;
+    margin-top: 5%;
+    background: #32CDFF;
+    text-align: center;
+}
+
+div > a{
+    text-transform: uppercase;
+    font-weight: bold;
+    margin: 2%;
+}
