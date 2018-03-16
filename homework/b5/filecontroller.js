@@ -1,14 +1,11 @@
 const fs = require('fs');
 
 let readFile = (path) =>{
-    return JSON.parse(fs.readFileSync(path, 'utf-8'));
+    return JSON.parse( fs.readFileSync(path, 'utf-8'));
 }
 
-let writeFile = (path, writeData) => {
-    fs.writeFile(path, JSON.stringify(writeData), (err) =>{
-        if(err) {console.log(err)}
-        console.log("success");
-    });
+let writeFile = (path, writeData, onWriteFileDone) => {
+    fs.writeFile(path, JSON.stringify(writeData), onWriteFileDone);
 }
 
 let readFileWithCallBack= (path, callback) => {
