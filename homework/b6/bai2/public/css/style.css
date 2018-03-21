@@ -134,6 +134,11 @@ visibility: visible;
     position: absolute;
     bottom: 5%;
 }
+@media only screen and (max-width: 600px) {
+    div.speech{
+        visibility: hidden;
+    }
+}
 
 
   
