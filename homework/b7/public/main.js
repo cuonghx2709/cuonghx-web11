@@ -24,4 +24,11 @@ $(document).ready(() =>{
            
         }
     });
+
+    $('#button').click(()=>{
+        if($('#questionInput').val().length == 0){
+            alert("Không có câu hỏi");
+        }
+    });
+
 });

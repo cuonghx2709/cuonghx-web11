@@ -6,9 +6,10 @@ Router.get('/:id', (req, res) => {
     let id = req.params.id;
 
     questionController.findbyID(id, (doc) => {
-        let left = (doc.no) / (doc.yes + doc.no) * 100;
+        let sum = doc.yes + doc.no;
+        let left = doc.no / sum * 100;
 
-        if (doc.no == 0) {
+        if (sum == 0) {
             left = 50;
         }
         let right = 100 - left;
