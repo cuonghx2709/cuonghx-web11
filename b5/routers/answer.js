@@ -1,6 +1,6 @@
 const express = require('express');
 const Router = express.Router();
-const fileController = require('../filecontroller');
+const fileController = require('../controllers/filecontroller');
 
 Router.post('/:id', (req, res) => {
     let questionList = [...fileController.readFile('./data.json')];

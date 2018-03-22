@@ -19,7 +19,8 @@ Router.get('/', (req, res) => {
     } else {
         res.render('home', {
             question: question,
-            id: randomNumber + 1
+            id: randomNumber + 1,
+            home :'active'
         });
     }
 });

@@ -2,10 +2,14 @@ const express = require('express');
 const path = require('path');
 const handlebar = require('express-handlebars');
 const bodyParser = require('body-parser');
-const fileController = require('./filecontroller');
 const homeRouter = require('./routers/home.js');
 const askRouter = require('./routers/ask.js');
 const answerRouter = require('./routers/answer.js');
+const mongoose = require('mongoose');
+const fileController = require('./controllers/filecontroller');
+
+
+// home6
 
 let app = express();
 
@@ -29,6 +33,10 @@ app.get('/question/:id', (req, res) => {
     });
 });
 
+mongoose.connect('mongodb://localhost/mongodb', (err) =>{
+    if(err) console.log(err);
+    console.log("Database connect success!");
+});
 
 app.use(express.static('public'));
 

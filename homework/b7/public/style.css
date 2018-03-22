@@ -1,0 +1,11 @@
+.button {
+    border-radius: 25px;
+    padding: 5px 15px;
+}
+.progress{
+    margin: 0px 10px;
+    height: 30px;
+}
+a:hover{
+    text-decoration: none;
+}

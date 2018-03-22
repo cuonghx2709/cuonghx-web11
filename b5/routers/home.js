@@ -1,6 +1,6 @@
 const express = require('express');
 const Rounter = express.Router();
-const fileController = require('../filecontroller');
+const fileController = require('../controllers/filecontroller');
 
 
 Rounter.get('/', (req, res) => {

@@ -3,7 +3,9 @@ const Router = express.Router();
 const fileController = require('../filecontroller.js');
 
 Router.get('/', (req, res) => {
-    res.render('ask');
+    res.render('ask',  {
+        quickask: 'active'
+    });
 });
 
 Router.post('/', (req, res) => {
