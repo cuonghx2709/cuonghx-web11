@@ -30,18 +30,38 @@
             </a>
         </div>
     </div>
+
+    <h5 id="id" class="d-none"></h5>
 </div>
 
 <script>
     $(document).ready(() => {
+
+        $('#no').on('click', ()=>{
+            let id = $('#id').text();
+            $.ajax({
+                url: "/submit/no/" + id,
+                success: () =>{
+                   window.location = '/question/' + id;
+                }
+            });
+        });
+
+        $('#yes').on('click', ()=>{
+            let id = $('#id').text();
+            $.ajax({
+                url: "/submit/yes/" + id,
+                success: () =>{
+                   window.location = '/question/' + id;
+                }
+            });
+        });
         $.ajax({
             url: '/randomquestion',
             success: (question) => {
                 if (!question) {
                 } else {
                     $('#question').text(question.question);
-                    $('#no').attr("href", "../submit/no/" + question._id);
-                    $('#yes').attr("href", "../submit/yes/" + question._id);
                     $('kqvote').attr("href", '../question/' + question._id);
                     $('#button-vote').removeClass('d-none');
                     $('#kqvote').removeClass('d-none');
@@ -49,6 +69,7 @@
                     $('#otherquestion').removeClass('text-center');
                     $('#otherquestion').addClass('col-6');
                     $('#kqvote').attr('href', '../question/' + question._id);
+                    $('#id').text(question._id);
                 }
 
             }
