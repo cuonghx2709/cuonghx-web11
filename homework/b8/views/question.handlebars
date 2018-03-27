@@ -1,0 +1,57 @@
+<div class="text-center m-5">
+    <h1 id="question"></h1>
+</div>
+
+<div class="text-center mt-5">
+    <h3>vote :
+        <span id="vote"></span>
+    </h3>
+</div>
+
+<h6 class="d-none" id="id">{{id}}</h6>
+
+<div class="progress mb-5 ">
+    <div class="progress-bar bg-danger" id="dislike">
+        <i class="far fa-thumbs-down" id="left"></i>
+    </div>
+    <div class="progress-bar bg-primary" id="like">
+        <i class="far fa-thumbs-up" id="right"></i>
+    </div>
+
+</div>
+<div class="row">
+    <a href="../" class="col-md-2 mx-auto col-5">
+        <div class="btn btn-success ">Xem Câu hỏi khác</div>
+    </a>
+
+</div>
+
+<script>
+    $(document).ready(() => {
+        let id = $('#id').text();
+        let data = { id: id };
+        $.ajax({
+            url: '/question/',
+            method: 'POST',
+            data: data,
+            success: (doc) => {
+                if (doc) {
+                    $('#question').text(doc.question);
+                    $('#vote').html(doc.yes + doc.no);
+                    let left = doc.no / (doc.yes + doc.no) * 100;
+
+                    if (doc.yes + doc.no == 0) {
+                        left = 50;
+                    }
+                    let right = 100 - left;
+
+                    $('#dislike').css("width", left + "%");
+                    $('#like').css("width", right + "%");
+                    $('#left').text(left.toFixed(2) + "%");
+                    $('#right').text(right.toFixed(2) + "%");
+
+                }
+            }
+        });
+    });
+</script>

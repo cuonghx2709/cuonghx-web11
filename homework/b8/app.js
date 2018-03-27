@@ -27,7 +27,8 @@ app.use('/question', questionRouter);
 
 app.use(express.static('public'));
 
-app.post('/testajax', (req, res) =>{
+app.post('/testajax/:question', (req, res) =>{
+    console.log(question);
     res.send("Hihi");
 });
 
