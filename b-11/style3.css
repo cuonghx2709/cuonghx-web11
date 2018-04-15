@@ -1,0 +1,28 @@
+.cont{
+    display: inline-block;
+}
+
+.div1{
+    display: inline-flex;
+    width: 24.7%;
+    background: #d9e9fc;
+    vertical-align: text-top;
+}
+.div2{
+    display: inline-flex;
+    width: 24.7%;
+    background: #c0dccd;
+    vertical-align: text-top;
+}
+.div3{
+    display: inline-flex;
+    width: 24.7%;
+    background: #c3cdc4;
+    vertical-align: text-top;
+}
+.div4{
+    display: inline-flex;
+    width: 24.7%;
+    background: #fbcccc;
+    vertical-align: text-top;
+}

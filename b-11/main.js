@@ -1,0 +1,1 @@
+// document.getElementById("container").style.width = window.innerWidth -  document.getElementsByClassName('block-left').style.width - document.getElementsByClassName('block-right').style.width;

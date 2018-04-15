@@ -1,0 +1,28 @@
+*{
+    box-sizing: border-box;
+}
+.column{
+    padding: 10px;
+}
+body {
+    margin: 0;
+}
+.div_left{
+    background: #dae8fc;
+    float: left;
+    width: 200px;
+    height: 700px;
+}
+.div_right{
+
+    background: #d5e8d4;
+    float: right;
+    width: 200px;
+    height: 800px;
+}
+.content1{
+    background: #66ffff;
+}
+.content2{
+    background: #bababa;
+}

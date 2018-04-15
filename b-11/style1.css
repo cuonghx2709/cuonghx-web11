@@ -1,0 +1,25 @@
+.block-left{
+    display: inline-block;
+    width: 200px;
+    float: left;
+    background: #d9e9fc;
+    height: 700px;
+}
+
+.block-right{
+    display: inline-block;
+    float: right;
+    position: top;
+    background: #d4e9d5;
+    width: 200px;
+}
+#main{
+    display: inline-block;
+}
+
+.div1{
+    background: #a7acb0
+}
+.div2{
+   background: #46ffff
+}

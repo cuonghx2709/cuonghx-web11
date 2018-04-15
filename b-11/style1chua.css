@@ -1,0 +1,14 @@
+.colum_left{
+    background : #dae8fc;
+    float: left;
+    width: 200px;
+}
+
+.colum_right{
+    background: #d5e8d4;
+    float: right;
+    width: 200px;
+}
+.colum_center{
+    background:  #66ffff; 
+}
