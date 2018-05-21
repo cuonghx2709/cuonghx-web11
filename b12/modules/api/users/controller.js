@@ -1,9 +1,10 @@
 const modelUser = require('./model')
 
-const createUser = ({username, password}) => new Promise((resolve, reject) => {
+const createUser = ({username, password, email}) => new Promise((resolve, reject) => {
     modelUser.create({
         username,
-        password
+        password,
+        email
     }).then(data => { resolve(data._id)
     }).catch(err => reject(err))
 })
@@ -49,6 +50,12 @@ const deleteUser = id => new Promise((resolve, reject) => {
     .catch(err => reject(err))
 })
 
+const getUserForAuth = username => new Promise((res, rej) => {
+    modelUser.findOne({username})
+    .select("username password _id")
+    .exec().then(user => res(user)).catch(err => rej(err))
+})
+
 module.exports = {
     createUser,
     updateUserAvatar,
@@ -57,5 +64,6 @@ module.exports = {
     updateUserPassword,
     deleteUser,
     getAllUser,
-    getOne
+    getOne,
+    getUserForAuth
 }

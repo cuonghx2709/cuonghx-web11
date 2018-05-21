@@ -2,12 +2,12 @@
 const imageModel = require('./model')
 
 // chi lay imageUrl, title, des, created trong 1 object truyen vao
-const createImage = ({imageUrl, title, descreption, createdBy}) => new Promise((resolve, reject) =>{
+const createImage = ({imageUrl, title, descreption, id}) => new Promise((resolve, reject) =>{
     imageModel.create({
         imageUrl,
         title,
         descreption,
-        createdBy
+        createdBy: id
     })
     .then(data => resolve({id: data._id}))
     .catch(err => reject(err)) 

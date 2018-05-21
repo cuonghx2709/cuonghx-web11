@@ -68,3 +68,6 @@ Modern day:
     - CreatedBy
     - like
     - view
+
+## Authentication/Authorization
+
